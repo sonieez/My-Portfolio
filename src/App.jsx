@@ -13,12 +13,14 @@ function App() {
         <h1 className='my-name'>Sona Zeynalova</h1>
         <h2 className='my-prof'>Junior Frontend Developer</h2>
         <p className='my-description'>Continuously learning modern web technologies and improving my frontend development skills.</p>
-        <a href='#projects'>
-          <button className='projects-button'>Projects</button>
-        </a>
-        <a href='#contact'>
-          <button className='contact-button'>Contact</button>
-        </a>
+        <div className='buttons'>
+          <a href='#projects'>
+            <button className='projects-button'>Projects</button>
+          </a>
+          <a href='#contact'>
+            <button className='contact-button'>Contact</button>
+          </a>
+        </div>
       </div>
 
       <div className='about-page'>
@@ -33,24 +35,27 @@ function App() {
 
       <div id='projects' className='projects-page'>
         <h2 className='page-title'>Featured Projects</h2>
-        {projects.map((project) => <ProjectCard project={project}/>)}
+        <div className='project-grid'>
+          {projects.map((project) => <ProjectCard project={project}/>)}
+        </div>
+        
       </div>
 
       <div id='contact' className='contact-page'>
         <h2 className='page-title'>Contact Me</h2>
         <p className='contact-message'>Have a project in mind or just want to say hello? Feel free to reach out! I'd be happy to connect and discuss new opportunities.</p>
         <div className='contacts'>
-          <div className='github-contact'>
+          <div className='github-contact contact'>
             <img className='app-icon' src=''/>
             <h4 className='app-name'>Github</h4>
             <a href='https://github.com/sonieez'>sonieez</a>
           </div>
-          <div className='linkedin-contact'>
+          <div className='linkedin-contact contact'>
             <img className='app-icon' src=''/>
             <h4 className='app-name'>Linkedin</h4>
             <a href='https://www.linkedin.com/in/sona-zeynalova-4bb872385/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Be4KOVg%2BFQSy1julTeZC%2B1g%3D%3D'>Sona Zeynalova</a>
           </div>
-          <div className='email-contact'>
+          <div className='email-contact contact'>
             <img className='app-icon' src=''/>
             <h4 className='app-name'>Email</h4>
             <a href='mailto:sonie.zeynalova@gmail.com'>sonie.zeynalova@gmail.com</a>

@@ -5,11 +5,14 @@ function ProjectCard({project}){
       <img src={project.image} className="project-image" />
       <h3 className="project-name">{project.name}</h3>
       <p className="project-description">{project.about}</p>
-      {project.tools.map((t) => <p className="project-tool">{t}</p>)}
-      <a href={project.live}>
+      <div className="project-tools">
+        {project.tools.map((t) => <p className="project-tool">{t}</p>)}
+      </div>
+      
+      <a href={project.live} target="_blank">
         <button className="live-button">Live</button>
       </a>
-      <a href={project.code}>
+      <a href={project.code} target="_blank">
         <button className="code-button">Code</button>
       </a>
     </div>
