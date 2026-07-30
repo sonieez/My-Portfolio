@@ -1,5 +1,6 @@
 import ProjectCard from './ProjectCard.jsx'
 import SkillCard from './SkillCard.jsx'
+import { skills } from './data/Skills.js'
 import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <div className='skills-page'>
         <hr/>
         <h2>Skills</h2>
+        {skills.map((skill) => <SkillCard skill={skill}/>)}
       </div>
       <div className='projects-page'>
         <hr/>
