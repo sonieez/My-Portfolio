@@ -130,6 +130,11 @@ body {
 /* Projects */
 .projects-page {
   background: #14103a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
 .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; justify-items: space-evenly; }
 .project-container {
@@ -139,6 +144,7 @@ body {
   overflow: hidden;
   transition: transform .25s ease;
   padding-bottom: 8px;
+  margin-top: 20px;
 }
 .project-container:hover { transform: translateY(-6px); }
 .project-image { 
