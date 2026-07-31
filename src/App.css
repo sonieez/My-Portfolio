@@ -87,7 +87,7 @@ body {
   border-radius: 4px;
 }
 
-.about-me, .contact-message { color: var(--muted); line-height: 1.7; max-width: 700px; }
+.about-me, .contact-message { color: var(--muted); line-height: 1.7; max-width: 700px; text-align: center; }
 
 /* Skills */
 .skills-grid { 
@@ -99,8 +99,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: nowrap;
   padding-top: 120px;
-  height: 60vh;
+  height: auto;
   justify-content: space-evenly;
 }
   
@@ -220,3 +221,79 @@ body {
 }
 .app-name { margin: 0 0 6px; }
 .contact a { color: var(--accent); text-decoration: none; word-break: break-all; }
+
+@media (max-width: 768px) {
+  .main-page,
+  .about-page,
+  .skills-page,
+  .contact-page {
+    height: auto;
+    min-height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+  }
+
+  .app > div {
+    padding: 60px 6%;
+  }
+
+  .my-name {
+    font-size: 2.2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .buttons button {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-buttons {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .live-button, .code-button {
+    margin: 0;
+    padding: 10px 16px;
+    font-size: .9rem;
+  }
+
+  .skill-container {
+    width: 100%;
+    max-width: 320px;
+    flex: none;
+  }
+
+  .social-contacts {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    grid-template-columns: 32px 1fr;
+    padding: 14px;
+  }
+
+  .email-icon {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .my-name {
+    font-size: 1.8rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+}
