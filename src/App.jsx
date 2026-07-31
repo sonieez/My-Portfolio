@@ -3,6 +3,9 @@ import SkillCard from './SkillCard.jsx'
 import { skills } from './data/Skills.js'
 import { projects } from './data/Projects.js'
 import './App.css'
+import githubIcon from '../src/data/images/github-logo.png'
+import linkedinIcon from '../src/data/images/linkedin-logo.png'
+import emailIcon from '../src/data/images/email-logo.png'
 
 function App() {
   
@@ -30,7 +33,10 @@ function App() {
 
       <div className='skills-page'>
         <h2 className='page-title'>Skills</h2>
-        {skills.map((skill) => <SkillCard skill={skill}/>)}
+        <div className='skills-grid'>
+          {skills.map((skill) => <SkillCard skill={skill}/>)}
+        </div>
+        
       </div>
 
       <div id='projects' className='projects-page'>
@@ -45,20 +51,32 @@ function App() {
         <h2 className='page-title'>Contact Me</h2>
         <p className='contact-message'>Have a project in mind or just want to say hello? Feel free to reach out! I'd be happy to connect and discuss new opportunities.</p>
         <div className='contacts'>
-          <div className='github-contact contact'>
-            <img className='app-icon' src=''/>
-            <h4 className='app-name'>Github</h4>
-            <a href='https://github.com/sonieez'>sonieez</a>
+          <div className='social-contacts'>
+            <div className='github-contact contact'>
+              <img className='app-icon' src={githubIcon}/>
+              <div className='app-info'>
+                <h4 className='app-name'>Github</h4>
+                <a href='https://github.com/sonieez'>sonieez</a>
+              </div>
+          
+            </div>
+            <div className='linkedin-contact contact'>
+              <img className='app-icon' src={linkedinIcon}/>
+              <div className='app-info'>
+                <h4 className='app-name'>Linkedin</h4>
+                <a href='https://www.linkedin.com/in/sona-zeynalova-4bb872385/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Be4KOVg%2BFQSy1julTeZC%2B1g%3D%3D'>Sona Zeynalova</a>
+              </div>
+              
+            </div>
           </div>
-          <div className='linkedin-contact contact'>
-            <img className='app-icon' src=''/>
-            <h4 className='app-name'>Linkedin</h4>
-            <a href='https://www.linkedin.com/in/sona-zeynalova-4bb872385/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Be4KOVg%2BFQSy1julTeZC%2B1g%3D%3D'>Sona Zeynalova</a>
-          </div>
+          
           <div className='email-contact contact'>
-            <img className='app-icon' src=''/>
-            <h4 className='app-name'>Email</h4>
-            <a href='mailto:sonie.zeynalova@gmail.com'>sonie.zeynalova@gmail.com</a>
+            <img className='app-icon email-icon' src={emailIcon}/>
+            <div className='app-info'>
+              <h4 className='app-name'>Email</h4>
+              <a href='mailto:sonie.zeynalova@gmail.com'>sonie.zeynalova@gmail.com</a>
+            </div>
+            
           </div>
         </div>
       </div>

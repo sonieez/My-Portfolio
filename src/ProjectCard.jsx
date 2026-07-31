@@ -8,13 +8,15 @@ function ProjectCard({project}){
       <div className="project-tools">
         {project.tools.map((t) => <p className="project-tool">{t}</p>)}
       </div>
+      <div className="project-buttons">
+        <a href={project.live} target="_blank">
+          <button className="live-button">Live</button>
+        </a>
+        <a href={project.code} target="_blank">
+          <button className="code-button">Code</button>
+        </a>
+      </div>
       
-      <a href={project.live} target="_blank">
-        <button className="live-button">Live</button>
-      </a>
-      <a href={project.code} target="_blank">
-        <button className="code-button">Code</button>
-      </a>
     </div>
   )
 }
